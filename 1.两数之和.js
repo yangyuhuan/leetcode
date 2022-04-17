@@ -10,8 +10,12 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(nums, target) {
-
+var twoSum = function (nums, target) {
+  let map = new Map();
+  for (var i = 0; i < nums.length; i++) {
+    let res = nums[i];
+    if (map.has(res)) return [map.get(res), i];
+    map.set(target - res, i);
+  }
 };
 // @lc code=end
-
