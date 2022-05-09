@@ -45,7 +45,7 @@ function reversePairs(nums){
   const mergeArr = (left, right) =>{
     let i = 0; j = 0;
     while(i < left.length && j < right.length){
-      if(left[i]/3 > right[j]){
+      if(left[i]/2 > right[j]){
         count +=left.length -i
         j++
       }else{
