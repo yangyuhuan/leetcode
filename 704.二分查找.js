@@ -13,20 +13,20 @@
 解释: 2 不存在 nums 中因此返回 -1 */
 
 var nums = [-1, 0, 3, 5, 9, 12],
-  target = 9
+  target = 9;
 var search = (nums, target) => {
   let start = 0,
-    end = nums.length - 1
+    end = nums.length - 1;
   while (start <= end) {
-    let mid = start + Math.floor((end - start) / 2)
+    let mid = start + Math.floor((end - start) / 2);
     if (nums[mid] == target) {
-      return mid
+      return mid;
     } else if (nums[mid] < target) {
-      start = mid + 1
+      start = mid + 1;
     } else {
-      end = mid - 1
+      end = mid - 1;
     }
   }
-  return -1
-}
-console.log(search(nums, target))
+  return -1;
+};
+console.log(search(nums, target));
